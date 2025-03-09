@@ -15,3 +15,6 @@ try {
     Write-Host "Failed to import module '$moduleName'. Error: $_"
     exit 1
 }
+
+Write-Host "Available commands in '$moduleName' module:"
+Get-Command -Module $moduleName
