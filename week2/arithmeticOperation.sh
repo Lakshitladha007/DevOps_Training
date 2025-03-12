@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ -z "$1" ]; then
   echo "Error: missing first parameter."
   exit 1
