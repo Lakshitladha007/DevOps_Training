@@ -9,22 +9,22 @@ Steps:
 2. Search for Internet Gateway, create a IGW and attach it to the VPC that we created in previous step.
 
 3. Create 2 public subnets and choose the same VPC for both subnets that we created in step1. Also, make the subnets available in 2 different zones, I selected:
-   > ap-south-1a
-   > ap-south-2b
+   ap-south-1a
+   ap-south-2b
 The CIDR I selected for both subnets were:
-   > 12.0.1.0/24
-   > 12.0.3.0/24
+   12.0.1.0/24
+   12.0.3.0/24
 
 4. Create a route table in the same VPC, and associate both the subnets to this route table. 
 Now, create a route such that the subnets have access to internet.
 
 5. Now, create 2 EC2 instances, one-one in both the subnets.
 The important part is the netwrok setting in each EC2 instance:
-   > Choose the VPC we created
-   > For one instance choose one subnet and for other instance choose the left subnet.
-   > Enable assigning public IP for both the instances.
-   > Create a security group, such that apart from SSH we can also make HTTP request as we are going to install apache on these EC2 instances.
-   > In userdata section, write the script to Bootstrap the EC2 instacne.
+   Choose the VPC we created
+   For one instance choose one subnet and for other instance choose the left subnet.
+   Enable assigning public IP for both the instances.
+   Create a security group, such that apart from SSH we can also make HTTP request as we are going to install apache on these EC2 instances.
+   In userdata section, write the script to Bootstrap the EC2 instacne.
 
 ``` Bash
 
@@ -50,20 +50,20 @@ and finaly Launch instance.
 Create a security group for allowing access from internet. And finally click on create LB.
 Copy the DNS name of load balancer and run on chrome to verify whether reuqests are forwarded to different servers or not.
 
-> LoadBalancer Screenshot:
+LoadBalancer Screenshot:
 ![LoadBalancer Screenshot](./loadBalancer.png)
 
-> TargetGroup Screenshot:
+TargetGroup Screenshot:
 ![TargetGroup Screenshot](./targetGroup.png)
 
-> Ec2 Instance1 Screenshot:
+Ec2 Instance1 Screenshot:
 ![Ec2 Instance1 Screenshot](./ec2Instance1.png)
  
-> Ec2 Instance2 Screenshot:
+Ec2 Instance2 Screenshot:
 ![Ec2 Instance2 Screenshot](./ec2Instance2.png)
 
-> Output on Instance1 Screenshot:
+Output on Instance1 Screenshot:
 ![Output on Instance1 Screenshot](./outputOnInstance1.png)
 
-> Output on Instance2 Screenshot:
+Output on Instance2 Screenshot:
 ![Output on Instance2 Screenshot](./outputOnInstance2.png)
