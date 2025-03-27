@@ -19,12 +19,12 @@ The CIDR I selected for both subnets were:
 Now, create a route such that the subnets have access to internet.
 
 5. Now, create 2 EC2 instances, one-one in both the subnets.
-The important part is the netwrok setting in each EC2 instance:
-   Choose the VPC we created
-   For one instance choose one subnet and for other instance choose the left subnet.
-   Enable assigning public IP for both the instances.
-   Create a security group, such that apart from SSH we can also make HTTP request as we are going to install apache on these EC2 instances.
-   In userdata section, write the script to Bootstrap the EC2 instacne.
+The important part is the netwrok setting in each EC2 instance:<br>
+   Choose the VPC we created.<br>
+   For one instance choose one subnet and for other instance choose the left subnet.<br>
+   Enable assigning public IP for both the instances.<br>
+   Create a security group, such that apart from SSH we can also make HTTP request as we are going to install apache on these EC2 instances.<br>
+   In userdata section, write the script to Bootstrap the EC2 instacne.<br>
 
 ``` Bash
 
