@@ -15,7 +15,7 @@ Steps:
 5. Create an EC2 instance, name it my "my-private-instance", choose the VPC that we created and also choose the private subnet that we created. Also, enable doing SSH into it(specify,only from public subnet CIDR).<br>
 
 6. Create a NAT gateway in public subnet and choose connectivity type as public.<br>
-![alt text](1NATGateway.png)
+![alt text](Screenshots/1NATGateway.png)
 
 7. Now, create one public route table, associate it to public subnet and add a route to send all incoming traffic to IGW that we created.<br>
 
@@ -28,18 +28,18 @@ Steps to connect to private EC2 instance:
 ```Bash
 ssh -i <private-key-file.pem> ubuntu@ip_address_of_public_ec2_instance
 ```
-![alt text](1SSHintoPublicEC2.png)
+![alt text](Screenshots/1SSHintoPublicEC2.png)
 
 2. Now we have entered our public EC2 instance. Now, verify whether we have access to internet or not by ruuning:<br>
 ```Bash
 sudo apt install net-tools
 ```
-![alt text](1installIntoPublicEC2.png)
+![alt text](Screenshots/1installIntoPublicEC2.png)
 
 If we see packages been downloaded or we have access to internet, than it can be said we have access to internet.<br>
 
 3. In our public EC2 instance create a file "private-key.pem" and copy the private key of your private EC2 instance into this file.<br>
-![alt text](1privateKeyOfPrivateEC2.png)
+![alt text](Screenshots/1privateKeyOfPrivateEC2.png)
 
 Also change the permissions of this file to 400. Now, run:<br>
 
@@ -52,14 +52,14 @@ ssh -i <private-key.pem> ubuntu@ip_address_of_private_ec2_instance
 ```Bash
 ping google.com
 ```
-![alt text](1pingFromPrivateEC2.png)
+![alt text](Screenshots/1pingFromPrivateEC2.png)
 
 or<br>
 
 ```Bash
 sudo apt install net-tools
 ```
-![alt text](1installIntoPrivateEC2.png)
+![alt text](Screenshots/1installIntoPrivateEC2.png)
 
 If we see packages been downloaded or we have access to internet, than it can be said we have access to internet.<br>
 

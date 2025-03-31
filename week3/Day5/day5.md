@@ -48,22 +48,22 @@ and finaly Launch instance.
 
 8. Final step is to create a Application Load Balancer and make it internet facing.
 Create a security group for allowing access from internet. And finally click on create LB.
-Copy the DNS name of load balancer and run on chrome to verify whether reuqests are forwarded to different servers or not.
+Copy the DNS name of load balancer and run on chrome to verify whether requests are forwarded to different servers or not.
 
 LoadBalancer Screenshot:
-![LoadBalancer Screenshot](./loadBalancer.png)
+![LoadBalancer Screenshot](Screenshots/loadBalancer.png)
 
 TargetGroup Screenshot:
-![TargetGroup Screenshot](./targetGroup.png)
+![TargetGroup Screenshot](Screenshots/targetGroup.png)
 
 Ec2 Instance1 Screenshot:
-![Ec2 Instance1 Screenshot](./ec2Instance1.png)
+![Ec2 Instance1 Screenshot](Screenshots/ec2Instance1.png)
  
 Ec2 Instance2 Screenshot:
-![Ec2 Instance2 Screenshot](./ec2Instance2.png)
+![Ec2 Instance2 Screenshot](Screenshots/ec2Instance2.png)
 
 Output on Instance1 Screenshot:
-![Output on Instance1 Screenshot](./outputOnInstance1.png)
+![Output on Instance1 Screenshot](Screenshots/outputOnInstance1.png)
 
 Output on Instance2 Screenshot:
-![Output on Instance2 Screenshot](./outputOnInstance2.png)
+![Output on Instance2 Screenshot](Screenshots/outputOnInstance2.png)
