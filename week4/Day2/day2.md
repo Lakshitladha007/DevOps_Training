@@ -9,11 +9,11 @@ Steps:<br>
 4. Go to IAM and create 2 policies:<br>
 > Bucket Policy: This allows to copy objects from source bucket and put them in destination bucket.<br>
 
-![Bucket Policy](Sreenshots/copyBucketPolicy.png)
+![Bucket Policy](Screenshots/copyBucketPolicy.png)
 
 > CloudWatch Policy: This allows us to view and list logs whenever we test our lambda function or the trigger is inoked.<br>
 
-![Cloudwatch Policy](Sreenshots/cloudwatchLogPolicy.png)
+![Cloudwatch Policy](Screenshots/cloudwatchLogPolicy.png)
 
 5. Go to IAM role that we created in step3 and attach the policies made in step4 to this role.
 
@@ -95,18 +95,18 @@ def lambda_handler(event, context):
 10. Now, put an object in source bucket and verify whther it is copied to destination bucket or not.<br>
 
 >Source Bucket intial:<br>
-![Source Bucket intial](Sreenshots/initialSourceBucket.png)
+![Source Bucket intial](Screenshots/initialSourceBucket.png)
 
 >Destination Bucket intial:<br>
-![Destination Bucket intial](Sreenshots/initialDestinationBucket.png)
+![Destination Bucket intial](Screenshots/initialDestinationBucket.png)
 
 >Source Bucket final:<br>
-![Source Bucket final](Sreenshots/finalySourceBucket.png)
+![Source Bucket final](Screenshots/finalySourceBucket.png)
 
 >Destination Bucket final:<br>
-![Destination Bucket final](Sreenshots/finalDestinationBucket.png)
+![Destination Bucket final](Screenshots/finalDestinationBucket.png)
 
 >Response in Cloudwatch log after trigger is called:<br>
-![lambdaResponseLog](Sreenshots/lambdaResponseLog.png)
+![lambdaResponseLog](Screenshots/lambdaResponseLog.png)
 
 
