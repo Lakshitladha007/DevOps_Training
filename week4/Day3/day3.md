@@ -49,6 +49,6 @@ Create a security group for allowing access from internet. And finally click on 
 First choose an AWS origin, than create a cache policy. Disable WAF. Keep remaining option as it is. And, finally click on create distribution.
 <br>
 
-![hitFromCloudFront](Screenshots/hitFromCloudFront.png) 
-
 ![missFromCloudFront](Screenshots/missFromCloudFront.png)
+
+![hitFromCloudFront](Screenshots/hitFromCloudFront.png) 
