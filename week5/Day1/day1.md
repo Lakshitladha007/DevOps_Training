@@ -9,7 +9,7 @@ Terraform uses HCL(Hashicorp Configuration Language). HCL is a declarative langu
 > It works on state management, keeps track of state in '.tf' file which helps in incremental updates(Only what changed is updated).<br>
 > Declarative and modular.<br>
 
-#### Teraform Providers
+### Teraform Providers
 The biggest advantage of using Terraform is its ability of provisioning infrastructure across multiple platforms.<br>
 This functionality is achieved through "Terraform Providers".<br>
 A provider is a plugin that allows Terraform to interact with APIs of external platforms like AWS, Azure, GCP, GitHub, etc.<br>
@@ -43,7 +43,7 @@ The file lives at the root of your Terraform project directory and should be com
 > If a newer version has breaking changes, your infra may break.<br>
 > Your pipeline might fail.<br>
 
-### Terraform 
+### Terraform Commands 
 
 ##### 1. terraform init
 Initializes the Terraform working directory. It downloads and installs plugins which are used within the configuration.
