@@ -1,0 +1,36 @@
+services:
+  mysql-db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  flask-backend:
+    build: ./flask-backend
+    depends_on:
+      - mysql-db
+    environment:
+      DB_HOST: mysql-db
+      DB_USER: user
+      DB_PASSWORD: pass
+      DB_NAME: mydb
+    expose:
+      - "5000"
+
+  nginx-web:
+    image: nginx:latest
+    depends_on:
+      - flask-backend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+volumes:
+  mysql_data:
