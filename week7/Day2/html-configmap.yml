@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: html-config
+  namespace: nginx
+  labels:
+    name: html-config
+data:
+  index.html: |
+    <html>
+      <head><title>Hello</title></head>
+      <body>
+        <h1>Hello, Lakshit this side!</h1>
+      </body>
+    </html>
