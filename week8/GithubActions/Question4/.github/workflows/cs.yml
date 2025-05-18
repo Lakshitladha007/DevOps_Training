@@ -1,0 +1,44 @@
+name: Node.js Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  linting-and-testing:
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    steps:
+    - name: starting notification
+      uses: act10ns/slack@v2
+      with:
+        status: starting
+        channel: "#all-itt"
+        message: Starting the testing and linting workflow
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setting up the Node environment
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install all the dependencies
+      run: npm install
+
+    - name: Run Lint
+      run: npm run lint
+
+    - name: Run unit Tests using zest
+      run: npm test
+
+    - name: WOrkflow complete Notification
+      uses: act10ns/slack@v2
+      with:
+        channel: "#all-itt"
+        status: ${{ job.status}}
+        steps: ${{ toJson(steps) }}
+      if: always()
