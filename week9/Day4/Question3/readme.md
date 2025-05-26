@@ -22,11 +22,11 @@ Fnally, save.
 
 8. Go to logic-app, under this go to logic-app designer, choose the logic-app that we created. Under "Development Tools", choose "Logic app Designer" and create the follwing workflow as in below images:<br>
 ![alt text](Screenshots/7.png)
-<br> 
+
 ![alt text](Screenshots/8.png) 
-<br>
+
 ![alt text](Screenshots/9.png) 
-<br>
+
 ![alt text](Screenshots/10.png)
 
  
