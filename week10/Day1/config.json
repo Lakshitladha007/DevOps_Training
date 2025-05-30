@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "sample-app",
+    "version": "1.0.0",
+    "debug": true
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "username": "admin",
+    "password": "secret",
+    "dbname": "mydatabase"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/app.log"
+  },
+  "features": {
+    "enable_signup": true,
+    "enable_email_notifications": false
+  }
+}

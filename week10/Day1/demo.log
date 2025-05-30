@@ -1,0 +1,8 @@
+2025-05-30 15:43:24,467 - INFO - Successfully initialized the logger
+2025-05-30 15:43:24,467 - INFO - Started writing the data
+2025-05-30 15:43:24,467 - INFO - {'app': {'name': 'sample-app', 'version': '1.0.0', 'debug': True}, 'database': {'host': 'localhost', 'port': 5432, 'username': 'admin', 'password': 'secret', 'dbname': 'mydatabase'}, 'logging': {'level': 'INFO', 'file': 'logs/app.log'}, 'features': {'enable_signup': True, 'enable_email_notifications': False}}
+2025-05-30 15:43:24,468 - INFO - Successfully wrote the data
+2025-05-30 15:44:01,617 - INFO - Successfully initialized the logger
+2025-05-30 15:44:01,618 - INFO - Started writing the data
+2025-05-30 15:44:01,618 - INFO - {'app': {'name': 'sample-app', 'version': '1.0.0', 'debug': True}, 'database': {'host': 'localhost', 'port': 5432, 'username': 'admin', 'password': 'secret', 'dbname': 'mydatabase'}, 'logging': {'level': 'INFO', 'file': 'logs/app.log'}, 'features': {'enable_signup': True, 'enable_email_notifications': False}}
+2025-05-30 15:44:01,621 - INFO - Successfully wrote the data
