@@ -26,7 +26,6 @@ def intialize_logger():
 
 def write_data():
     global args
-    # verify whether configfile name is passed in arguement or not
     try: 
         if not args.configfilename:
             raise ValueError("Config file argument is missing!")
@@ -35,7 +34,6 @@ def write_data():
         logging.warning(f"Warning: {e}")
         return
     
-    # if configfile is passed chech whether the file exist or not
     if not os.path.exists(args.configfilename):
         print("File does not exist")
         logging.warning("Warning: File does not exist.")
