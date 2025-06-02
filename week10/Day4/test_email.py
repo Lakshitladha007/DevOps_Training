@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-import send_email  # your actual module name
+import send_email
 
 class TestSendEmail(unittest.TestCase):
 
