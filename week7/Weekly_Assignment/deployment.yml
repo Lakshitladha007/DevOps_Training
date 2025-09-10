@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-dotnet-deployment
+  namespace: my-dotnet-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-dotnet-app
+  template:
+    metadata:
+      labels:
+        app: my-dotnet-app
+    spec:
+      containers:
+        - name: dotnet-container
+          image: 381492063209.dkr.ecr.ap-south-1.amazonaws.com/dotnet-image:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+      imagePullSecrets:
+        - name: ecr-secret

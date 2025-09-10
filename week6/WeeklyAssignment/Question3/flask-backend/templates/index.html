@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Flask App</title></head>
+<body>
+  <h2>Add a Name</h2>
+  <form method="POST">
+    <input type="text" name="name" required>
+    <button type="submit">Add</button>
+  </form>
+  <h3>Entries</h3>
+  <ul>
+    {% for id, name in entries %}
+      <li>{{ id }} - {{ name }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

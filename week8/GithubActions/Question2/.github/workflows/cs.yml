@@ -1,0 +1,19 @@
+name: Secrets and Variables
+
+on:
+  push:
+    branches:
+      - main  
+
+env:
+  CONTAINER_REGISTRY: docker.io
+  IMAGE_NAME: github-actions-nginx
+  IMAGE_TAG: latest
+
+jobs:
+  secretsAndvariables:
+    runs-on: self-hosted
+    steps:
+
+      - name: Username and password console output
+        run: echo "Hello ${{ vars.Username}}, the password is ${{ secrets.password}}"

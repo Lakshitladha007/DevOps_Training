@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Code') {
+            steps {
+                echo 'Cloning the code'
+                git branch: 'main', url: 'https://github.com/Lakshitladha007/Jenkins.git' 
+                echo 'Code cloned successfully'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building the Docker image'
+                sh 'docker build -t my-static-page:latest .'
+                echo 'Docker image built successfully'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the Docker container'
+                sh 'docker run -d -p 8002:80 my-static-page:latest'
+                echo 'Docker container deployed successfully'
+            }
+        }
+    }
+}

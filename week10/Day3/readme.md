@@ -1,0 +1,1 @@
+The ".env" file contains email_passcode, sender_email and receiver_email that need to be configured.
